@@ -1,7 +1,10 @@
 package com.tweteroo.tweteroo.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,8 +22,13 @@ public class UserController {
   @Autowired
   private UserService userService;
 
+  @GetMapping
+  public List<User> getAllUsers() {
+    return userService.getAllUsers();
+  }
+
   @PostMapping
-  @ResponseStatus(value = HttpStatus.CREATED)
+  @ResponseStatus(value = HttpStatus.OK)
   public void signUp(@RequestBody UserDTO req){
     userService.create(new User(req));
   }
