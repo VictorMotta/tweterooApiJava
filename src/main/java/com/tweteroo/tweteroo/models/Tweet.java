@@ -34,7 +34,7 @@ public class Tweet {
   @Column(name = "user_id")
   private Integer userId;
 
-  @ManyToOne(fetch = FetchType.LAZY)
+  @ManyToOne(fetch = FetchType.EAGER)
   @JoinColumn(name = "user_id", referencedColumnName = "id", insertable = false, updatable = false)
   private User user;
 }
