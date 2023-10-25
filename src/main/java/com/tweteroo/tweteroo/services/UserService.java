@@ -25,7 +25,6 @@ public class UserService {
 
   public void create(User data){
     User user = getUserByUsername(data.getUsername());
-    System.out.println(user);
     if(user != null) {
       user.setAvatar(data.getAvatar());
       repository.save(user);

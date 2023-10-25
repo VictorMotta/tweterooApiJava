@@ -1,3 +1,7 @@
+
+
+
+
 CREATE TABLE users(
   id SERIAL PRIMARY KEY,
   username VARCHAR(60) NOT NULL UNIQUE,
@@ -9,3 +13,5 @@ CREATE TABLE tweet(
   text TEXT NOT NULL,
   user_id INTEGER NOT NULL REFERENCES users(id)
 );
+
+
