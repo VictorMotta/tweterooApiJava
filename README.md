@@ -8,7 +8,7 @@ Certifique-se de seguir as instruções abaixo para configurar e usar a API.
 
 ### Requisitos Gerais
 
-- A porta utilizada pelo servidor é a 8080 (porta padrão do Spring).
+- A porta utilizada pelo servidor é a 8080 (porta padrão do Spring). Porém para acessar a api pelo insominia, postman e afins o url é: http://localhost:80
 - O versionamento usando Git é obrigatório. Certifique-se de criar um **repositório público** no seu perfil do GitHub.
 - Faça commits a cada funcionalidade implementada.
 
@@ -117,6 +117,6 @@ docker-compose up -d --build
 docker-compose down -v
 ```
 
-Certifique-se de que o Docker esteja em execução antes de usar os comandos acima. Após iniciar o projeto, você pode acessar a API em http://localhost:8080.
+Certifique-se de que o Docker esteja em execução antes de usar os comandos acima. Após iniciar o projeto, você pode acessar a API em http://localhost:80.
 
 Este é um guia básico para o Tweteroo. Você pode precisar ajustar as instruções com base nas configurações específicas do seu ambiente. Certifique-se de ter o Docker e o Docker Compose instalados antes de seguir as instruções acima.
